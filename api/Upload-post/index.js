@@ -48,7 +48,7 @@ function getPosts(){
   var items = [];
 
   $.each( data[0], function( key, val ) {
-    items.push( "Note: " + val["Note"] + "<br/>");
+    items.push( "Post: " + val["Post"] + "<br/>");
     items.push('<button type="button" id="subNewForm" class="btn btndanger" onclick="deletePost('+val["ID"] +')">Delete</button> <br/><br/>');
   });
 
