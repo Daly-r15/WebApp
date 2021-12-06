@@ -27,7 +27,7 @@ $(document).ready(function() {
 //A function to submit a new asset to the REST endpoint 
 function submitNewPost(){
   var subObj = {
-    Text: $('#Text').val()
+    Post: $('#Post').val()
   }
   subObj = JSON.stringify(subObj)
 
