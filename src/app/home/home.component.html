@@ -1,5 +1,18 @@
-<nav>
-    <a routerLink="/Upload"><button class=""> Post Something</button></a><br>
-    <a routerLink="/Upload"><button class=""> Comment</button></a><br>
-    <a routerLink="/Upload"><button class=""> Sign-out</button></a>
-</nav>
+<!doctype html>
+<html lang="en" ng-app="Dashboard">
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <div>
+      <h2>Posts</h2>
+    <ul class="Posts">
+      <li *ngFor= "let post of posts"  [class.selected]="post === selectedPost"(click)="onSelect(post)">
+        <span class="badge">{{post.id}}</span> {{post.post}}
+      </li>
+    </ul>
+    </div>
+    
+    
+  </body>
+

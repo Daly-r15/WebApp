@@ -1,13 +1,15 @@
-<div> 
-    <form action="/action_page.php" class="container">
-      <h1>Post your status:</h1>
+<div>
+  <form (ngSubmit)="submitForm()" [formGroup] = "form">
+    <div class="form-group input-group-lg">
+      <div class="form-group input-group-lg">
+        <input class="form-control" placeholder="username" formControlName="username">
+    </div>
+      <textarea class="form-control" placeholder="Insert Post" formControlName="post"></textarea>
+      <div class="form-group">
+        <button class="btn btn-danger btn-block btn-lg">Post</button>
+    </div>
   
-      <label for="email"><b>text</b></label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-  
-      <!-- <br><button type="submit" class="btn">upload image</button>
-        
-      <br><button type="submit" class="btn">post</button> -->
-    </form>
+    </div>
+  </form>
 </div>
-<br><button type="submit" class="btn">sign out</button>
+
